@@ -1,0 +1,21 @@
+body{
+    background: white url(foto1) no-repeat;
+}
+h1{
+    text-decoration: overline;
+    font-family: fantasy;
+}
+h2{
+    text-decoration: line-through;
+    font-style: oblique;
+    word-spacing: 5cm;
+}
+h3{
+    text-decoration: underline;
+    letter-spacing: 2cm;
+    text-align: end;
+}
+.vermelho{
+    color: red;
+    text-decoration: underline;
+}

@@ -1,0 +1,30 @@
+@keyframes animacion{
+    0% {background-color: white;}
+    20% {background-color: darkred;color: white;}
+    80% {background-color: white;}
+
+}
+body{
+    animation-name: animacion;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+div{
+    /* transform: translate(10px,10ox); */
+    /* transform: scale(1.1,1); */
+    /* transform: skew(5deg,5deg); */
+    /* transform: rotate(180deg); */ 
+    background-color: black;
+    width: 12px;
+    height: 12px;
+    overflow: hidden;
+    /* height: 200px;   */
+    /* transform: rotateY(70deg); */
+    transition: width 14s,height 4s,transform 20s;
+    /* transition: height 4s; */
+}
+div:hover{
+    width:400px;
+    height: 500px;
+    transform: skew(-15deg,85deg);
+}

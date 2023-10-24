@@ -7,33 +7,73 @@
   </head>
   <body>
 	<header>Outubro Rosa</header>
-		<section>
-		<a href="#" class="link1">Mensagem 1</a>
-        <div class="div-oculta link1">
-            <h1>teste1</h1>
-            <img>
-        </div>
-        <a href="#" class="link2">Mensagem 2</a>
-        <div class="div-oculta link2">
-            <h1>teste2</h1>
-            <img>
-        </div>
-
-        <a href="#" class="link3">Mensagem 3</a>
-        <div class="div-oculta link3">
-            <h1>teste3</h1>
-            <img>
-        </div>
-        <a href="#" class="link4">Mensagem 4</a>
-        <div class="div-oculta link4">
-            <h1>teste4</h1>
-            <img>
-        </div>
-        <a href="#" class="link5">Mensagem 5</a>
-        <div class="div-oculta link5">
-            <h1>teste5</h1>
-            <img>
-        </div>
-		</section>
+		<nav>
+            <ul>
+                <li><a href="#" class="link1">Mensagem 1</a>
+                    <div class="div-oculta link1">
+                        <img src="https://images.pexels.com/photos/18221982/pexels-photo-18221982/free-photo-of-papel-de-parede-4k-wallpaper-4k-abstrato-resumo.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" height="60px" width="50px">
+                    </div></li>
+                <li><a href="#" class="link2">Mensagem 2</a>
+                    <div class="div-oculta link2">
+                    </div></li>
+                <li><a href="#" class="link3">Mensagem 3</a>
+                    <div class="div-oculta link3">
+                        <h1>teste3</h1>
+                        <img>
+                    </div></li>
+                <li><a href="#" class="link4">Mensagem 4</a>
+                    <div class="div-oculta link4">
+                        <h1>teste4</h1>
+                        <img>
+                    </div></li>
+                <li><a href="#" class="link5">Mensagem 5</a>
+                    <div class="div-oculta link5">
+                        <h1>teste5</h1>
+                        <img>
+                    </div></li>
+            </ul>
+		</nav>
+        <section>
+            <form action="">
+                Nome:
+                <input type="text" name="nome"><br><br><br>
+                Sexo:<br><br>
+                Masculino
+                <input type="radio" name="sexo" value="masculino"><br><br>
+                Feminino
+                <input type="radio" name="sexo" value="feminino"><br><br><br>
+                Interesses:<br><br>
+                Política
+                <input type="checkbox" name="interesse1" value="Política"><br><br>
+                Esportes
+                <input type="checkbox" name="interesse2" value="Esportes"><br><br><br>
+                Cidade:
+                <select name="cidade" id="">
+                    <option value="poa">Porto Alegre</option>
+                    <option value="canoas">Canoas</option>
+                    <option value="viamao">Viamão</option>
+                </select><br><br><br>
+                Escolha sua cor favorita:
+                <input type="color" value="#ffffff"><br><br><br>
+                Desde quando você gosta dessa cor?
+                <input type="date"><br><br><br>
+                Mais precisamente, desde que horário?
+                <input type="datetime-local"><br><br><br>
+                Pode ser só o mês e ano, se você não lembra:
+                <input type="month"><br><br><br>
+                Talvez você não tenha conseguido responder a essas questões, mas certamente saberá qual o seu e-mail:
+                <br><br>
+                <input type="email"><br><br><br>
+                Quantos e-mails você tem?
+                <input type="number" min="0" max="10"><br><br><br>
+                Mensagem:
+                <br><br>
+                <textarea name="mensagem" id="" cols="30" rows="10"></textarea>
+                <br><br>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </form>
+            <br><br><br>
+        </section>
   </body>
 </html>

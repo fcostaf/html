@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Exemplo de Botão JavaScript</title>
+</head>
+<body>
+    <h1>Contador</h1>
+    <p>Valor: <span id="valor">0</span></p>
+    <button id="aumentar">Aumentar</button>
+    <button id="diminuir">Diminuir</button>
+
+    <script>
+        // Obter referências para os elementos HTML
+        const valorElemento=document.getElementById("valor")
+        const aumentarBotao=document.getElementById("aumentar")
+        const diminuirBotao=document.getElementById("diminuir")
+
+        // Inicializar uma variável para rastrar o valor
+        let contador=0
+
+        // Função para aumentar o contador
+        function aumentarContador(){
+            contador++
+            valorElemento.textContent=contador
+        }
+
+        // Função para diminuir o contador
+        function diminuirContador(){
+            contador--
+            valorElemento.textContent=contador
+        }
+
+        // Adicionar manipuladores de eventos aos botões
+        aumentarBotao.addEventListener("click",aumentarContador)
+        diminuirBotao.addEventListener("click",diminuirContador)
+    </script>
+</body>
+</html>

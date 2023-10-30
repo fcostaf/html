@@ -13,20 +13,34 @@
            <td id="preferido">Rambo</td><td>Ação</td><td>1990</td>
         </tr>
         <tr>
-            <td>Exterminador</td><td>Comédia</td><td>1995</td>
+            <td id="comum">Exterminador</td><td>Comédia</td><td>1995</td>
         </tr>
         <tr>
-            <td>Xuxa e os Trapalhões</td><td>Drama</td><td>1985</td>
+            <td id="comum">Xuxa e os Trapalhões</td><td>Drama</td><td>1985</td>
         </tr>
     </table>
+    <button onclick="preferido()">Preferido</button>
+    <button onclick="comum()">Comum</button>
     <script>
+        function preferido(){
+            const table=document.getElementById("filmes");
+            const cells=table.getElementsByTagName("td");
+
+            for (const cell of cells){
+                const status=cell.getAttribute("id");
+                if (status=="preferido")
+                cell.style.color="blue";
+            }
+        }
+        function comum(){
         const table=document.getElementById("filmes");
         const cells=table.getElementsByTagName("td");
 
         for (const cell of cells){
             const status=cell.getAttribute("id");
-            if (status=="preferido")
-            cell.style.color="blue";
+            if (status=="comum")
+            cell.style.color="red";
+            }
         }
     </script>
 </body>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Tabela</title>
+</head>
+<body>
+    <table id="filmes">
+        <tr>
+            <th>Filme</th><th>Gênero</th><th>Ano</th>
+        </tr>
+        <tr>
+           <td id="preferido">Rambo</td><td>Ação</td><td>1990</td>
+        </tr>
+        <tr>
+            <td>Exterminador</td><td>Comédia</td><td>1995</td>
+        </tr>
+        <tr>
+            <td>Xuxa e os Trapalhões</td><td>Drama</td><td>1985</td>
+        </tr>
+    </table>
+    <script>
+        const table=document.getElementById("filmes");
+        const cells=table.getElementsByTagName("td");
+
+        for (const cell of cells){
+            const status=cell.getAttribute("id");
+            if (status=="preferido")
+            cell.style.color="blue";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body style="background-color: antiquewhite;display: flex;align-items: center;flex-direction: column;">
+    <div style="border-style: dashed;border-color: goldenrod;padding: 10px;width: 300px;">
+        <div style="display: flex;flex-direction: column;justify-content: center;align-items: center;margin-top: 100px;">
+            <img id="foto" height="200px" width="180px">
+            <h1 id="pessoa">Aluno</h1>
+        </div>
+        <div style="display: flex;flex-direction: row;justify-content: center;align-items: center;">
+            <button id="anterior" onclick="anterior()"><</button>
+            <button id="seguinte" onclick="seguinte()">></button>
+        </div>
+    </div>
+</body>
+<script>
+    var pessoa=Array();
+    pessoa[0]="Aluno";
+    pessoa[1]="Professor";
+    pessoa[2]="Funcionário";
+    pessoa[3]="Administrador";
+
+    var foto=Array();
+    foto[0]="foto1.jfif";
+    foto[1]="foto2.jfif";
+    foto[2]="foto3.jfif";
+    foto[3]="foto4.jfif";
+
+    document.getElementById("foto").src=foto[0];
+
+    var n=0;
+    function anterior(){
+        n-=1
+        if(n==-1){n=3}
+        document.getElementById("foto").src=foto[n];
+        document.getElementById("pessoa").innerHTML=pessoa[n];
+    }
+    function seguinte(){
+        n+=1
+        if(n==4){n=0}
+        document.getElementById("foto").src=foto[n];
+        document.getElementById("pessoa").innerHTML=pessoa[n];
+    }
+</script>
+</html>

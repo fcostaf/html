@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>RFT</title>
+</head>
+<body>
+    <table id="tabela">
+        <tr>
+            <td id="primeiro"></td><td id="relacao"></td><td id="segundo"></td>
+        </tr>
+        <tr>
+            <td id="qprimeiro"></td><td id="qrelacao"></td><td id="qsegundo"></td>
+        </tr>
+        <tr>
+            <td></td><td><button>SIM</button></td><td></td>
+        </tr>
+        <tr>
+            <td></td><td><button>NÃO</button></td><td></td>
+        </tr>
+    </table>
+</body>
+<script>
+    var resultados=Array();
+    let result1= "";
+    let result2 = "";
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let counter=0;
+    while (counter<6) {
+        let c=characters.charAt(Math.floor(Math.random() * characters.length));
+        if(counter<3){result1 += c;}else{result2 += c;};
+        counter += 1;
+    }
+    
+    resultados[0]=result1;
+    resultados[1]=result2;
+    document.getElementById("primeiro").innerHTML=resultados[0];
+    document.getElementById("segundo").innerHTML=resultados[1];
+    document.getElementById("qprimeiro").innerHTML=resultados[0];
+    document.getElementById("qsegundo").innerHTML=resultados[1]+"?";
+
+    var relacao=Array();
+    relacao[0]="é o mesmo que";
+    relacao[1]="é o oposto de";
+    rel1=relacao[Math.floor(Math.random() * 1)];
+    rel2=relacao[Math.floor(Math.random() * 1)];
+    document.getElementById("relacao").innerHTML=relacao[0];
+    document.getElementById("qrelacao").innerHTML=relacao[1];
+
+</script>
+</html>

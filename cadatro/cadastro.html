@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Cadastro</title>
+</head>
+<body>
+    Nome: <input type="text" id="nome"> <br><br>
+    Telefone: <input type="text" id="telefone"><br><br>
+    E-mail: <input type="text" id="email"><br><br>
+    Cidade: <input type="text" id="cidade"><br><br>
+    Estado: <input type="text" id="estado"><br><br>
+    <button onclick="validar()">CADASTRAR</button>
+</body>
+<script>
+    function validar(){
+        n=0;
+        var estado=document.getElementById("estado");
+        if(estado.value==""){alert("Estado não informado.");estado.focus();}else{n+=1;}
+        var cidade=document.getElementById("cidade");
+        if(cidade.value==""){alert("Cidade não informada.");cidade.focus();}else{n+=1;}
+        var email=document.getElementById("email");
+        if(email.value==""){alert("E-mail não informado.");email.focus();}else{n+=1;}
+        var telefone=document.getElementById("telefone");
+        if(telefone.value==""){alert("Telefone não informado.");telefone.focus();}else{n+=1;}
+        var nome=document.getElementById("nome");
+        if(nome.value==""){alert("Nome não informado.");nome.focus();}else{n+=1;}
+        if(n==5){alert("Cadastrado.")}
+    }
+</script>
+</html>

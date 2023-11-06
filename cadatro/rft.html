@@ -35,6 +35,7 @@
     </div>
 </body>
 <script>
+    // letras aleatorias
     var resultados=Array();
     let result1= "";
     let result2 = "";
@@ -53,6 +54,8 @@
     document.getElementById("qprimeiro").innerHTML=resultados[0];
     document.getElementById("qsegundo").innerHTML=resultados[1]+"?";
 
+    //
+    // relacao aleatoria
     var relacao=Array();
     relacao[0]="é o mesmo que";
     relacao[1]="é o oposto de";
@@ -60,6 +63,18 @@
     rel2=relacao[Math.floor(Math.random() * 1)];
     document.getElementById("relacao").innerHTML=relacao[0];
     document.getElementById("qrelacao").innerHTML=relacao[1];
+
+    //
+
+    // linha afirmacao
+    var afirm=document.createElement("tr");
+    var palavra1=document.createElement("td");
+    var palavra2=document.createElement("td");
+    var rel=document.createElement("td");
+
+    var p1texto=document.createTextNode();
+    var p2texto=document.createTextNode();
+    var reltexto=document.createTextNode();
 
 </script>
 </html>

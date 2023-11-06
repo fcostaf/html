@@ -1,0 +1,57 @@
+body{
+    
+}
+
+table{
+    background-color: aliceblue;
+    width: 50%;
+    margin: auto;
+    border: 1px solid;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+td{
+    height: 50px;
+    width: 40px;
+}
+
+.af{
+    background-color: black;
+    color: white;
+}
+
+.que{
+    background-color: white;
+    font-weight: bold;
+}
+.container{
+    height: 750px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: space-between;
+}
+
+.menu1{
+    background-color: darkslateblue;
+    flex-basis: 20%;
+}
+
+.central{
+    background-color: forestgreen;
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.divtabela{
+    margin-top: 6%;
+    width: 80%;
+}
+
+.menu2{
+    background-color: bisque;
+    flex-basis: 20%;
+}

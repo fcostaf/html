@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Regex</title>
+</head>
+<body>
+    <div>
+        <p id="paragrafo">
+        Você sabe como escolher plantas para apartamento pequeno?<br><br>
+        Muitas famílias utilizam as plantas para decorar o ambiente de um lar. No entanto, os benefícios que elas geram para o local vão além de ser apenas um item para decoração.<br><br>
+        Isso porque existem espécies que possuem uma boa adaptação a ambientes com espaço pequeno. Além disso, você consegue encontrar opções que não necessitam de muita rega e cuidados excessivos.<br><br>
+        Portanto, você precisa entender que para ter uma planta em seu lar, é preciso considerar as principais características e cuidados de cada uma delas.<br><br>
+        Por isso, a Direcional trouxe um conteúdo completo para você ter as informações necessárias para escolher as melhores plantas para apartamento pequeno. Acompanhe a seguir e boa leitura!<br><br>
+        </p>
+    </div>
+    <div>
+        <input id="pesquisa" type="text">
+        <button onclick="pesquisar()">PESQUISAR</button>
+    </div>
+    <div style="background-color: aquamarine; width: 50%;">
+        <p id="resultado"></p>
+    </div>
+</body>
+<script>
+    function pesquisar(){
+        let paragrafo=document.getElementById("paragrafo").innerHTML;
+        let pesquisa=document.getElementById("pesquisa").value;
+        let rx=pesquisa+"[A-Za-z]+";
+        let regx=new RegExp(rx,"g")
+        let resultado=regx.exec(paragrafo);
+        resultado.forEach(function printing(element,index){
+            document.getElementById("resultado").append(element+"\n");
+        })
+        //document.getElementById("resultado").innerText=paragrafo.match(/^a/);
+    }
+</script>
+</html>

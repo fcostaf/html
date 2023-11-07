@@ -36,23 +36,28 @@
 </body>
 <script>
     // letras aleatorias
-    var resultados=Array();
-    let result1= "";
-    let result2 = "";
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let counter=0;
-    while (counter<6) {
-        let c=characters.charAt(Math.floor(Math.random() * characters.length));
-        if(counter<3){result1 += c;}else{result2 += c;};
-        counter += 1;
+    function letras(){
+        //var resultados=Array();
+        let result1= "";
+        //let result2 = "";
+        const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        let counter=0;
+        while (counter<3) {
+            let c=characters.charAt(Math.floor(Math.random() * characters.length));
+            //if(counter<3){result1 += c;}else{result2 += c;};
+            result1 += c
+            counter += 1;
+        return result1
     }
     
-    resultados[0]=result1;
-    resultados[1]=result2;
+    //resultados[0]=result1;
+    //resultados[1]=result2;
     document.getElementById("primeiro").innerHTML=resultados[0];
     document.getElementById("segundo").innerHTML=resultados[1];
     document.getElementById("qprimeiro").innerHTML=resultados[0];
     document.getElementById("qsegundo").innerHTML=resultados[1]+"?";
+    }
+    
 
     //
     // relacao aleatoria

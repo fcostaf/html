@@ -1,0 +1,49 @@
+body{
+    color: #282933;
+    font-family: Verdana, sans-serif;
+    font-size: 0.9em;
+}
+
+
+header{
+    color: #fff;
+    background-color: #5C5128;
+    height: 60px;
+    padding: 10px;
+    text-align: center;
+    font-size: x-large;
+}
+
+
+nav{
+    background-color: #282933;
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+}
+nav ul li{
+    display: inline;
+    margin: 55px;
+}
+
+a{
+    color: #AD9431;
+    text-decoration: none;
+}
+
+
+section{
+    height: 700px;
+    width: 65%;
+    padding: 20px;
+}
+
+
+footer{
+    height: 30px;
+    color: #fff;
+    background-color: #5C5128;
+    padding: 10px;
+    text-align: right;
+}
+

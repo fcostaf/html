@@ -12,6 +12,7 @@ header{
     padding: 10px;
     text-align: center;
     font-size: x-large;
+    font-weight: bold;
 }
 
 
@@ -36,6 +37,10 @@ section{
     height: 700px;
     width: 65%;
     padding: 20px;
+    text-align: center;
+    background-color: #ad943177;
+    margin: auto;
+    ba
 }
 
 

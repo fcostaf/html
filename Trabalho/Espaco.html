@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-br">
+    <meta charset="UTF-8" /><link rel="stylesheet" href="Site.css">
+    <title>FCF-Psicologia-Espaço</title>
+</head>
+<body>
+    <header>FCF<br>-PSICOLOGIA-</header>
+    <nav><ul><li><a href="Site.html">Início</a></li><li><a href="Textos.html">Textos</a></li><li><a href="Espaco.html">Espaço</a></li><li><a href="Contato.html">Contato</a></li></ul></nav>
+    <section>
+        <p class="aviso">Atendo na Clínica Neurodiagnóstico, localizada na avenida Independência 925, sala 1514.<br>
+        Conheça um pouco do espaço da Clínica.</p>
+        <div id="carrossel">
+            <img id="foto" height="400px" width="400px"><br>
+            <h1 id="espacoDescricao"></h1>
+        </div>
+        <div style="display: flex;flex-direction: row;justify-content: center;align-items: center;">
+            <button id="anterior" onclick="anterior()" class="botao"><</button>
+            <button id="seguinte" onclick="seguinte()" class="botao">></button>
+        </div>
+    </section>
+    <footer>Desenvolvido por mim</footer>
+</body>
+<script>
+    var espacoDescricao=Array();
+    espacoDescricao[0]="Padrãozinho 1";
+    espacoDescricao[1]="Padrãozinho 2";
+    espacoDescricao[2]="Padrãozinho 3";
+
+    var foto=Array();
+    foto[0]="contato.jpg";
+    foto[1]="contato1.jpg";
+    foto[2]="contato2.jpg";
+
+    document.getElementById("foto").src=foto[0];
+    document.getElementById("espacoDescricao").innerHTML=espacoDescricao[0];
+
+    var n=0;
+    function anterior(){
+        n-=1
+        if(n==-1){n=2}
+        document.getElementById("foto").src=foto[n];
+        document.getElementById("espacoDescricao").innerHTML=espacoDescricao[n];
+    }
+    function seguinte(){
+        n+=1
+        if(n==3){n=0}
+        document.getElementById("foto").src=foto[n];
+        document.getElementById("espacoDescricao").innerHTML=espacoDescricao[n];
+    }
+</script>
+</html>

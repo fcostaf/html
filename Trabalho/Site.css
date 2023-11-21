@@ -2,6 +2,10 @@ body{
     color: #282933;
     font-family: Verdana, sans-serif;
     font-size: 0.9em;
+    background-image: url(psi.jpg);
+    background-size: 75px 75px;
+    background-repeat: repeat;
+    background-color: #fff;
 }
 
 
@@ -39,6 +43,9 @@ a:hover{
     padding: 3px;
 }
 
+p{
+    background-color: #fff;
+}
 
 section{
     /* height: 700px; */
@@ -59,6 +66,11 @@ footer{
     text-align: right;
 }
 
+.fixo{
+    position: fixed;
+    width: 100%;
+}
+
 .aviso{
     font-weight: bold;
 }
@@ -76,7 +88,7 @@ footer{
 .centro{
     width: 450px;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
     padding-top: 2%;
 }
 .moldura{
@@ -84,6 +96,8 @@ footer{
     /* height: auto; */
     padding-top: 15px;
     padding-bottom: 15px;
+    margin-top: 80px;
+    border-radius: 25px;
 }
 .moldura1{
     background-image: url(contato1.jpg);
@@ -92,10 +106,12 @@ footer{
     padding-bottom: 15px;
 }
 .moldura2{
+    margin: auto;
     background-image: url(contato.jpg);
     /* height: auto; */
     padding-top: 15px;
     padding-bottom: 15px;
+    width: 90%;
 }
 .texto{
     background-color: #fff;
@@ -107,11 +123,6 @@ footer{
     font-weight: normal;
 }
 #indice{
-    color: #282933;
-    width: 70%;
-    margin: auto;
-    padding: 2%;
-    /* height: auto; */
     font-weight: bold;
 }
 

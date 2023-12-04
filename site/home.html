@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-br">
+    <meta charset="UTF-8" />
+    <title>FCF-Psicologia-</title>
+    <link rel="stylesheet" href="site.css">
+    <script src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color","yellow");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color","green");
+            });
+        
+            $("#mudaClasse").click(function(){
+                $("h1").addClass("exercicio1");
+                $("section").addClass("exercicio2");
+            });
+
+            $("#mudaCor").click(function(){
+                $("#section2").animate({
+                    opacity: 0.5,
+                    color: "red"
+                },2000)
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        FCF-PSICOLOGIA-
+    </header>
+    <nav>
+        Link link link
+    </nav>
+    <section>
+        <div id="section1" class="section1">1</div>
+        <div class="section2" id="section2" >
+            <h1>Jquery</h1>
+            Nome: <input type="text" name="fullname"><br>
+            Email: <input type="text" name="email"><br>
+            <button id="mudaClasse">Mudar classe</button>
+            <button id="mudaCor">Mudar cor</button>
+        </div>
+        <div class="section3">3</div>
+    </section>
+    <footer>
+        Desenvolvido por mim
+    </footer>
+</body>
+</html>

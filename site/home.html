@@ -25,6 +25,21 @@
                     color: "red"
                 },2000)
             });
+
+            $("#enviarBtn").click(function(){
+                var nome=$("input[name='nome']").val();
+                var email=$("input[name='email']").val();
+                $("#resultado").html("Olá, "+nome+", "+email+"!");
+            });
+            
+            $("#adicionar").click(function(){
+                var item=$("input[name='item']").val();
+                $("#lista").append("<li>"+item+"  <button id='b'>Remover</button></li>");
+                $("input[name='item']").val("");
+            })
+            $("#b").click(function(){
+                $(this).parent.remove();
+            });
         });
     </script>
 </head>
@@ -36,13 +51,22 @@
         Link link link
     </nav>
     <section>
-        <div id="section1" class="section1">1</div>
+        <div id="section1" class="section1">
+            <form id="form">
+                <input type="text" name="nome" placeholder="Seu nome">
+                <button type="button" id="enviarBtn">Enviar</button>
+            </form>
+            <div id="resultado"></div>
+        </div>
         <div class="section2" id="section2" >
             <h1>Jquery</h1>
             Nome: <input type="text" name="fullname"><br>
             Email: <input type="text" name="email"><br>
             <button id="mudaClasse">Mudar classe</button>
-            <button id="mudaCor">Mudar cor</button>
+            <button id="mudaCor">Mudar cor</button><br><br><br>
+            <input type="text" name="item">
+            <button id="adicionar">Adicionar</button>
+            <ul id="lista"></ul>
         </div>
         <div class="section3">3</div>
     </section>

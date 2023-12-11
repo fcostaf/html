@@ -34,11 +34,11 @@
             
             $("#adicionar").click(function(){
                 var item=$("input[name='item']").val();
-                $("#lista").append("<li>"+item+"  <button id='b'>Remover</button></li>");
+                $("#lista").append("<li>"+item+"  <button class='b'>Remover</button></li>");
+                $(".b").click(function(){
+                    $(this).parent().remove();
+                })
                 $("input[name='item']").val("");
-            })
-            $("#b").click(function(){
-                $(this).parent.remove();
             });
         });
     </script>

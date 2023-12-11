@@ -7,10 +7,17 @@ header{
     height: 150px;
     background-color: aqua;
 }
+.headerDark{
+    background-color: darkslategray;
+    color: aliceblue;
+}
 
 nav{
     height: 40px;
     background-color: beige;
+}
+.navDark{
+    background-color: saddlebrown;
 }
 
 section{
@@ -27,15 +34,28 @@ section{
     background-color: azure;
     color:green;
 }
+.section2Dark{
+    flex-grow: 4;
+    background-color: slategrey;
+    color:green;
+}
+
 .section3{
     flex-grow: 1;
     background-color: darkblue;
+}
+.section3Dark{
+    background-color: midnightblue;
 }
 
 footer{
     height: 60px;
     background-color: aqua;
     text-align: right;
+}
+.footerDark{
+    background-color: darkslategray;
+    color: aliceblue;
 }
 
 .exercicio1{
@@ -44,4 +64,14 @@ footer{
 }
 .exercicio2{
     color: blue;
+}
+
+.dark{
+    background-image: url('lua.png');
+    background-size: 38px;
+    height: 31px;
+    width: 31px;
+}
+.light{
+    background-image: url('sol.jfif');
 }

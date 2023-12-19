@@ -5,16 +5,21 @@ body{
 
 header{
     height: 300px;
-    background-color: aqua;
+    background-image: url(header.jpg);
 }
 .headerDark{
-    background-color: darkslategray;
+    background-image: url(headerDark.jpg);
     color: aliceblue;
 }
 
 nav{
-    height: 40px;
+    height: 60px;
     background-color: beige;
+	text-align: center;
+}
+nav ul li{
+    display: inline;
+    margin: 55px;
 }
 .navDark{
     background-color: saddlebrown;
@@ -25,22 +30,27 @@ section{
     flex-direction: row;
 }
 .section1{
-    flex-grow: 1;
-    background-color: black;
+    width: 20%;
+    background-image: url(section1.jpg);
     color: azure;
 }
 .section2{
-    flex-grow: 4;
+	width: 60%;
     background-color: azure;
     color:green;
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 .section2Dark{
-    background-color: slategrey;
+    background-color: black;
 }
 
 .section3{
-    flex-grow: 1;
-    background-color: darkblue;
+    width: 20%;
+    background-image: url(section3.jpg);
 }
 .section3Dark{
     background-color: midnightblue;
@@ -48,11 +58,11 @@ section{
 
 footer{
     height: 60px;
-    background-color: aqua;
+    background-image: url(header.jpg);
     text-align: right;
 }
 .footerDark{
-    background-color: darkslategray;
+    background-image: url(headerDark.jpg);
     color: aliceblue;
 }
 
@@ -121,7 +131,7 @@ footer{
 	transition: all 0.4s ease-in-out;
 	top: 20px;
 	left: 20px;
-	background: aqua;
+	background-image: url(header.jpg);
 	box-shadow: 
 		0 0 0 20px rgba(255,255,255,0.2), 
 		inset 0 0 3px rgba(115,114, 23, 0.8);
@@ -153,8 +163,8 @@ footer{
 }
 
 .ch-img-1 { 
-	background-image: url(psi.jpg);
-    background-size: 150px 150px;
+	background-image: url(logo.jpg);
+    background-size: 250px 250px;
 }
 
 .ch-info h3 {

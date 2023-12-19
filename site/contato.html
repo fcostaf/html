@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-br">
+    <meta charset="UTF-8" />
+    <title>FCF-Contato-</title>
+    <link rel="stylesheet" href="site.css">
+    <script src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            var modo=0;
+            $('#dark').click(function(){
+                if(modo==0){
+                    $('header').addClass('headerDark');
+                    $('footer').addClass('footerDark');
+                    $('#section2').addClass('section2Dark');
+                    $('nav').addClass('navDark');
+                    $('#section3').addClass('section3Dark');
+                    $('#dark').addClass('light');
+                    modo=1;
+                }else{
+                    $('header').removeClass('headerDark');
+                    $('footer').removeClass('footerDark');
+                    $('#section2').removeClass('section2Dark');
+                    $('nav').removeClass('navDark');
+                    $('#section3').removeClass('section3Dark');
+                    $('#dark').removeClass('light');
+                    modo=0;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <ul class="ch-grid">
+            <li>
+                <div class="ch-item ch-img-1">
+                    <div class="ch-info-wrap">
+                        <div class="ch-info">
+                            <div class="ch-info-front ch-img-1"></div>
+                            <div class="ch-info-back">
+                                <h3>Felipe Costa Fernandes</h3>
+                                <p>Psicólogo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <nav>
+        <ul><li><a href="inicial.html">Início</a></li><li><a href="textos.html">Textos</a></li><li><a href="espaco.html">Espaço</a></li><li><a href="contato.html">Contato</a></li><li><a href="home.html">Jquery</a></li><li><button id="dark" class="dark"></button></li></ul> 
+    </nav>
+    <section>
+        <div id="section1" class="section1">
+            
+        </div>
+        <div class="section2" id="section2" >
+            <p class="aviso">Preencha os campos abaixo para enviar sua mensagem ou agendar um horário.<br>Apenas os campos com * são obrigatórios, mas note que se preencher apenas esses fica meio que sem sentido.</p>
+            <form action="" method="post">
+                Nome completo: *<br>
+                <input type="text" name="nome" class="inputs"><br><br>
+                Data de nascimento:<br>
+                <input type="date" name="idade" class="inputs"><br><br>
+                E-mail: *<br>
+                <input type="email" name="email" class="inputs"><br><br>
+                Telefone:<br>
+                <input type="text" name="telefone" class="inputs"><br><br>
+                Horários disponíveis:<br>
+                <textarea name="horarios" cols="30" rows="3" class="inputs"></textarea><br><br>
+                Mensagem:<br>
+                <textarea name="mensagem" cols="30" rows="5" class="inputs"></textarea><br><br>
+                <input type="submit" value="Enviar" class="botao">
+                <input type="reset" value="Limpar" class="botao">
+            </form>
+        </div>
+        <div class="section3" id="section3">3</div>
+    </section>
+    <footer>
+        Desenvolvido por mim
+    </footer>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head lang="pt-br">
+    <meta charset="UTF-8" />
+    <title>FCF-Espaço-</title>
+    <link rel="stylesheet" href="site.css">
+    <script src="http://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        var espacoDescricao=Array();
+        espacoDescricao[0]="Sala de atendimento";
+        espacoDescricao[1]="Recepção";
+        espacoDescricao[2]="Entrada do prédio";
+
+        var foto=Array();
+        foto[0]="predio1.jpg";
+        foto[1]="predio2.jpg";
+        foto[2]="predio3.jpg";
+
+        document.getElementById("foto").src=foto[0];
+        document.getElementById("espacoDescricao").innerHTML=espacoDescricao[0];
+
+        var n=0;
+        function anterior(){
+            n-=1
+            if(n==-1){n=2}
+            document.getElementById("foto").src=foto[n];
+            document.getElementById("espacoDescricao").innerHTML=espacoDescricao[n];
+        }
+        function seguinte(){
+            n+=1
+            if(n==3){n=0}
+            document.getElementById("foto").src=foto[n];
+            document.getElementById("espacoDescricao").innerHTML=espacoDescricao[n];
+        }
+
+        $(document).ready(function(){
+            var modo=0;
+            $('#dark').click(function(){
+                if(modo==0){
+                    $('header').addClass('headerDark');
+                    $('footer').addClass('footerDark');
+                    $('#section2').addClass('section2Dark');
+                    $('nav').addClass('navDark');
+                    $('#section3').addClass('section3Dark');
+                    $('#dark').addClass('light');
+                    modo=1;
+                }else{
+                    $('header').removeClass('headerDark');
+                    $('footer').removeClass('footerDark');
+                    $('#section2').removeClass('section2Dark');
+                    $('nav').removeClass('navDark');
+                    $('#section3').removeClass('section3Dark');
+                    $('#dark').removeClass('light');
+                    modo=0;
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <ul class="ch-grid">
+            <li>
+                <div class="ch-item ch-img-1">
+                    <div class="ch-info-wrap">
+                        <div class="ch-info">
+                            <div class="ch-info-front ch-img-1"></div>
+                            <div class="ch-info-back">
+                                <h3>Felipe Costa Fernandes</h3>
+                                <p>Psicólogo</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </header>
+    <nav>
+        <ul><li><a href="inicial.html">Início</a></li><li><a href="textos.html">Textos</a></li><li><a href="espaco.html">Espaço</a></li><li><a href="contato.html">Contato</a></li><li><a href="home.html">Jquery</a></li><li><button id="dark" class="dark"></button></li></ul> 
+    </nav>
+    <section>
+        <div id="section1" class="section1">
+            
+        </div>
+        <div class="section2" id="section2" >
+            <p>Atendo na Clínica Neurodiagnóstico, localizada na avenida Independência 925, sala 1514.<br>
+                Conheça um pouco do espaço da Clínica.</p>
+                <div>
+                    <img id="foto" height="400px" width="400px"><br>
+                    <h1 id="espacoDescricao"></h1>
+                </div>
+                <div style="display: flex;flex-direction: row;justify-content: center;align-items: center;">
+                    <button id="anterior" onclick="anterior()" class="botao"><</button>
+                    <button id="seguinte" onclick="seguinte()" class="botao">></button>
+                </div>
+        </div>
+        <div class="section3" id="section3">3</div>
+    </section>
+    <footer>
+        Desenvolvido por mim
+    </footer>
+</body>
+</html>
